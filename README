@@ -2,7 +2,7 @@ This project involves evolving a planet(of 1 MJ) and a star(1 M_sun) separately 
 
 *****************planet**********************************************************************************************************************
 
-The planet has a create, followed by core and then evolve units. THERE IS AN EXTRA INLIST CALLED EVOLVEPLANET WHICH IS AN ARTIFACT, AND HOLDS NOSPECIAL COMMANDS. 
+The planet has a create, followed by core and then evolve units. THERE IS AN EXTRA INLIST CALLED EVOLVEPLANET WHICH IS AN ARTIFACT, AND HOLDS NO SPECIAL COMMANDS. 
 
 *********BINARY*******************************************************************************************************************************
 
