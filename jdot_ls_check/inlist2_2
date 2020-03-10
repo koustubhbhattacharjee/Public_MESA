@@ -1,0 +1,58 @@
+! inlist_test_rlo
+
+
+
+&star_job
+      
+      load_saved_model=.true.
+      saved_model_name="../star/final.mod"
+     ! change_rotation_flag = .true.
+     ! new_rotation_flag = .true.
+     ! new_omega_div_omega_crit = 0.0
+     ! set_initial_omega_div_omega_crit = .true.
+     ! set_omega_div_omega_crit_step_limit = 1
+ !     set_initial_age=.true.
+ !     initial_age=1d8
+
+
+      show_log_description_at_start = .false.
+
+
+/ ! end of star_job namelist
+
+
+
+&controls
+      
+    !  use_gold_tolerances = .true. 
+  
+      ! check for retries and backups as part of test_suite
+      ! you can/should delete this for use outside of test_suite
+      !   max_number_backups = 10
+      !   max_number_retries = 80
+
+     !  max_model_number = 70
+      max_age=2d9
+      star_history_name='history_0.495days_.data'
+
+      extra_terminal_output_file = 'log2' 
+      photo_directory = 'photos2'
+      log_directory = 'LOGS2'
+
+
+      profile_interval = 50
+      history_interval = 1
+      terminal_interval = 1
+      write_header_frequency = 10
+      
+      varcontrol_target = 1d-3
+      
+
+/ ! end of controls namelist
+
+
+&pgstar
+         
+
+
+/ ! end of pgstar namelist
