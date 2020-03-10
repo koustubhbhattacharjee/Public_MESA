@@ -1,0 +1,15 @@
+This project involves evolving a planet(of 1 MJ) and a star(1 M_sun) separately till a few million years and then putting them together in a binary at a short period of 0.48 days
+
+*****************planet**********************************************************************************************************************
+
+The planet has a create, followed by core and then evolve units. THERE IS AN EXTRA INLIST CALLED EVOLVEPLANET WHICH IS AN ARTIFACT, AND HOLDS NOSPECIAL COMMANDS. 
+
+*********BINARY*******************************************************************************************************************************
+
+The binary calls in the models of both star and planet and then evolves them WITHOUT INCIDENT IRRADIATION FLUX for the planet using inlist_project and the "Arras" mass transfer scheme. 
+
+
+There is a Temperature bump(log_Teff) at the very start of the binary evolution for the star at jdot_ls_check/LOGS1/history*.data and the end ofstars 'singular' evolution before it was put in the binary(star/LOGS/history.data).
+
+
+Thanks for replying!   
