@@ -1,0 +1,134 @@
+! env_vars.list
+
+   ! The following lists environment variables that can effect the way MESA runs.
+   
+   
+      ! Essential
+      
+      ! Recommended
+      
+      ! Optional
+
+      ! Misc
+
+      ! Private
+
+!----------------------------------------------------------------------------------------------
+
+   !# Essential
+
+         !### mesa_dir
+
+         ! Location of the mesa source code
+
+         MESA_DIR
+         
+         !### gyre_dir
+
+         ! Location of the gyre source code (only needed if running gyre)
+         ! If you haven't moved it from the MESA_DIR then set as
+         ! gyre_dir = $MESA_DIR/gyre/gyre
+
+         GYRE_DIR
+         
+!----------------------------------------------------------------------------------------------         
+               
+   !# Recommended
+   
+         !### omp_num_threads
+         
+         ! Number of threads MESA will run with, should be between 1 and 2 * number of logical cores
+         
+         OMP_NUM_THREADS
+         
+         !### mesasdk_root
+         
+         ! Location of the SDK 
+         
+         MESASDK_ROOT
+
+!----------------------------------------------------------------------------------------------
+
+   !# Optional
+         !### mesa_caches_dir
+         
+         ! Location where MESA will store and read cache files.
+         ! See star_job.defaults cache directories for more details.
+         
+         MESA_CACHES_DIR
+         
+         !### mesa_temp_caches_dir
+         
+         ! Location where mesa will write the cache file temporarily before moving to 
+         ! MESA_CACHES_DIR. If set, this folder MUST be unique for each
+         ! MESA run. If not set defaults to ./.mesa_temp_cache
+         
+         MESA_TEMP_CACHES_DIR
+   
+   
+         !### mesa_op_mono_data_path
+         
+         ! Location of the OP_MONO data files
+         ! See $MESA_DIR/star/test_suite/radiative_levitation/inlist_radiative_levitation
+         ! for more details.
+         
+         MESA_OP_MONO_DATA_PATH
+         MESA_OP_MONO_DATA_CACHE_FILENAME
+         
+         !### mesa_inlist
+         
+         ! By default MESA will look for a file called "inlist" in the local
+         ! working directory for its configuration. This overrides the filename
+         ! and can point to a file somewhere else.
+      
+         MESA_INLIST
+         
+!----------------------------------------------------------------------------------------------
+
+   !# Misc
+      ! Useful things that are not environment variables.
+      
+         !### Command line arguments
+         
+         ! ./star can accept one argument that overrides the location of the
+         ! inlist file (see mesa_inlist). This will also override the environment
+         ! variable mesa_inlist.
+         
+         ./star some_other_inlist_file 
+         
+         !### skip_build
+         
+         ! Empty file
+         ! If present in $MESA_DIR then no compiling is done when ./install is invoked
+         ! If present in a sub folder (e.g MESA_DIR/eos) then no compiling is done in the sub-folder
+         
+         skip_build
+         
+         !### skip_test
+         
+         ! Empty file
+         ! Similar to skip_build, but this will skip the compile time tests.
+         ! If placed in a sub-folder then only the tests in that folder are skipped
+         
+         skip_test
+ 
+         
+!----------------------------------------------------------------------------------------------
+         
+   !# Private
+      ! These options are for developers, you do not need them for normal usage.
+      ! If you use them and things break then stop using them.
+      
+         !### MESA_DIR_INTENTIONALLY_EMPTY
+         
+         ! Bypass checks done at compile time for checking if MESA_DIR is set.
+         
+         MESA_DIR_INTENTIONALLY_EMPTY
+         
+         !### MESA_TEMP_CACHES_DISABLE
+         
+         ! If set, then we do not use the temp cache mechanism, writing cache
+         ! files directly to the $MESA_DIR/data/ folder
+         
+         MESA_TEMP_CACHES_DISABLE
+   

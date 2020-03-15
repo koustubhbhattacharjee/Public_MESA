@@ -10,14 +10,16 @@
       history_columns_file = 'history_columns.list'
 
       show_log_description_at_start = .false.
-      relax_irradiation = .true. 
-      relax_to_this_irrad_flux= 0 
+
       load_saved_model=.true.
       saved_model_name="../planet/planet_evolve_0.48_P.mod"
-      read_extra_star_job_inlist1=.true.
-      extra_star_job_inlist1_name='../planet/evolveplanet'      
 
+      eos_file_prefix = 'mesa'
+      kappa_file_prefix = 'gs98'    
+      kappa_lowT_prefix = 'lowT_Freedman11'
 
+      change_lnPgas_flag = .true. 
+      new_lnPgas_flag = .true. 
 / ! end of star_job namelist
 
 
@@ -26,14 +28,18 @@
 
       max_age = 2d9
       star_history_name='history_0.48days_.data'
-      read_extra_controls_inlist1=.true.  
-      extra_controls_inlist1_name='../planet/evolveplanet'
-      
+           
 
       extra_terminal_output_file = 'log1' 
       photo_directory = 'photos1'
       log_directory = 'LOGS1'
-
+     ! varcontrol_target = 1d-3 
+      photo_interval = 50
+      profile_interval = 100
+      max_num_profile_models=1000
+      history_interval = 2
+      terminal_interval = 10
+      write_header_frequency = 10
 
       
 

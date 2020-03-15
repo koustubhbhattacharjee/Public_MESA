@@ -1,0 +1,45 @@
+
+! inlist_test_rlo
+
+
+
+&star_job
+      
+      save_model_when_terminate = .true.
+      save_model_filename = 'final.mod'
+      history_columns_file = 'history_columns.list'
+
+      show_log_description_at_start = .false.
+
+      load_saved_model=.true.
+      saved_model_name="final.mod"
+     # read_extra_star_job_inlist1=.true.
+      extra_star_job_inlist1_name='../planet/evolveplanet'      
+
+
+/ ! end of star_job namelist
+
+
+
+&controls
+
+      max_age = 2d9
+      star_history_name='history_0.48days_.data'
+      read_extra_controls_inlist1=.true.  
+      extra_controls_inlist1_name='../planet/evolveplanet'
+      
+
+      extra_terminal_output_file = 'log1' 
+      photo_directory = 'photos1'
+      log_directory = 'LOGS1'
+
+
+      
+
+/ ! end of controls namelist
+
+
+&pgstar
+         
+
+/ ! end of pgstar namelist

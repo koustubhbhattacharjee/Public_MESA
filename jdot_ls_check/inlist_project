@@ -9,7 +9,7 @@
 
 &binary_controls
          
-   initial_period_in_days = 0.48d0
+   initial_period_in_days = 1000.d0
    history_name='0.48_days_.data'
    do_jdot_ls=.false.
    do_jdot_mb=.false.
