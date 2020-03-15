@@ -10,7 +10,8 @@
       history_columns_file = 'history_columns.list'
 
       show_log_description_at_start = .false.
-
+      relax_irradiation = .true. 
+      relax_to_this_irrad_flux= 0 
       load_saved_model=.true.
       saved_model_name="../planet/planet_evolve_0.48_P.mod"
       read_extra_star_job_inlist1=.true.

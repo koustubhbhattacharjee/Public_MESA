@@ -19,7 +19,7 @@
   
 
    mdot_scheme="Arras"
-   implicit_scheme_tolerance = 1d-3
+!   implicit_scheme_tolerance = 1d-3
    mass_transfer_alpha = 0.0d0 
    mass_transfer_beta = 0.0d0 
    mass_transfer_delta = 0.0d0 

@@ -9,6 +9,8 @@
 
 
       show_log_description_at_start = .false.
+      relax_irradiation = .true.
+      relax_to_this_irrad_flux= 0
 
 
 / ! end of star_job namelist
